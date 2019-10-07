@@ -1,6 +1,6 @@
 mixin postInfo(item)
     .post-info
-        != full_date(item.date, 'll')
+        != full_date(item.date, 'YYYY-MM-DD')
         if item.tags && item.tags.length && (is_home() || is_post())
             - item.tags.each(function(tag) {
                 a(class="post-tag", href=url_for(tag.path))= "#" + tag.name
